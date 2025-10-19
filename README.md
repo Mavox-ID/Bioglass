@@ -96,6 +96,18 @@ Install Bioglass as an app on your device:
 
 ---
 
+---
+
+## ✸ Wiki
+
+Visit the project [wiki](https://github.com/Mavox-ID/Bioglass/wiki) for more information.
+
+## ✏ Issues
+
+If you have any optimization or other issues, or want to suggest an improvement, please let us know in the [issues](https://github.com/Mavox-ID/Bioglass/issues) section.
+
+---
+
 ## 🎨 Customization
 
 - **Add New Classes**: Edit `labels` array in `js/main.js`.  
