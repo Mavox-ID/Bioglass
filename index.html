@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bioglass</title>
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <script src="js/opencv.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <h1>Bioglass</h1>
+        <p>Created : <code class="code">Mavox-ID</code></p>
+    </div>
+    <div id="root">
+        <div class="App">      
+            <div class="content">              
+                <video id="video" autoPlay="true" playsInline="true" muted="true"></video>
+                <canvas width="416" height="416"></canvas>
+            </div> 
+        </div>
+    </div>
+    <div>
+    <button id="runInference">Run Inference</button>
+    <button id="stopInference">Stop Inference</button>
+    <script src="js/main.js"></script>
+</body>
+</html>
