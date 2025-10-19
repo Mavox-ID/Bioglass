@@ -31,14 +31,7 @@
         <img src="logo.png" alt="Bioglass Logo" class="logo">
         <h1>Bioglass</h1>
         <p>Created by <code>Mavox-ID</code></p>
-        <button id="installButton" style="display: none;">Download offline version</button>
-
-        <div id="installDialog" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
-        background: #111; color: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 0 10px #000;">
-        <p>Install Bioglass offline version?</p>
-        <button id="confirmInstall">Yes</button>
-        <button id="cancelInstall">Cancel</button>
-        </div>
+        <button id="installButton">Download offline version</button>
     </header>
 
     <main>
@@ -54,7 +47,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Mavox-ID (Bionic Glass; Bioglass) | All rights reserved</p>
+        <p>&copy; 19.10.2025 <code>Mavox-ID</code>code> (Bioglass; AI object scanner) | <code>All rights reserved</code></p>
     </footer>
 
     <script src="js/main.js"></script>
@@ -65,12 +58,9 @@
             .catch((err) => console.log(err));
         }
     </script>
-    <script>
+<script>
 let deferredPrompt;
 const installButton = document.getElementById('installButton');
-const installDialog = document.getElementById('installDialog');
-const confirmInstall = document.getElementById('confirmInstall');
-const cancelInstall = document.getElementById('cancelInstall');
 
 window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
@@ -78,28 +68,19 @@ window.addEventListener('beforeinstallprompt', (e) => {
     installButton.style.display = 'block';
 });
 
-installButton.addEventListener('click', () => {
-    installDialog.style.display = 'block';
-});
-
-confirmInstall.addEventListener('click', async () => {
-    installDialog.style.display = 'none';
+installButton.addEventListener('click', async () => {
     if (deferredPrompt) {
         deferredPrompt.prompt();
         const choiceResult = await deferredPrompt.userChoice;
         if (choiceResult.outcome === 'accepted') {
-            console.log('PWA installed');
+            console.log('PWA installed ✅ - download v.1');
             installButton.style.display = 'none';
             localStorage.setItem('pwaInstalled', 'true');
         } else {
-            console.log('Canceled - download PWA v.1');
+            console.log('Canceled ❌ - download PWA v.1');
         }
         deferredPrompt = null;
     }
-});
-
-cancelInstall.addEventListener('click', () => {
-    installDialog.style.display = 'none';
 });
 
 window.addEventListener('appinstalled', () => {
@@ -113,4 +94,5 @@ if (localStorage.getItem('pwaInstalled') === 'true') {
 </script>
 </body>
 </html>
+
 
