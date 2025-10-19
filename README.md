@@ -23,7 +23,7 @@ Bioglass can detect over **80 classes** including:
 
 `person, bicycle, car, motorcycle, airplane, bus, train, truck, boat, cat, dog, chair, laptop, cell phone, bottle` ...and many more.
 
-*(Full list available in `js/main.js`)*
+*(Full list available in `js/main.js`)* or [wiki](https://github.com/Mavox-ID/Bioglass/wiki#-object-classes)
 
 ---
 
