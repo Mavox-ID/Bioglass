@@ -1,0 +1,12 @@
+/* TEAM */
+Developers: Mark Voznyuk
+Site: https://bioglass.pp.ua
+Contact: markd.voznyuk@gmail.com
+
+/* THANKS */
+Inspired by: Development ✨
+
+/* TECHNOLOGY */
+Language: HTML5, CSS3, JS
+Frameworks: Tailwind, Astro/React
+Server: Claudflare
