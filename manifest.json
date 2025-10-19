@@ -1,0 +1,17 @@
+{
+  "name": "Bioglass",
+  "short_name": "Bioglass",
+  "description": "Offline site for object detection",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000"
+}
+

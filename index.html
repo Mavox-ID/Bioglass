@@ -1,28 +1,61 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bioglass</title>
+
+    <!-- ONNX и OpenCV -->
     <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
     <script src="js/opencv.js"></script>
-    <link href="css/style.css" rel="stylesheet">
-</head>
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Favicon и SEO -->
+    <link rel="icon" href="logo.png" sizes="512x512" type="image/png">
+    <meta name="description" content="Bioglass — Offline object detection website using AI.">
+    <meta name="keywords" content="Bioglass, object detection, AI, offline, PWA, camera, YOLO, Mask RCNN">
+    <meta name="author" content="Mavox-ID">
+    <meta property="og:title" content="Bioglass — Offline Object Detection">
+    <meta property="og:description" content="Offline website for AI object recognition using your camera.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:type" content="website">
+</head>
 <body>
-    <div id="header">
+    <header id="header">
+        <img src="logo.png" alt="Bioglass Logo" class="logo">
         <h1>Bioglass</h1>
-        <p>Created : <code class="code">Mavox-ID</code></p>
-    </div>
-    <div id="root">
-        <div class="App">      
-            <div class="content">              
-                <video id="video" autoPlay="true" playsInline="true" muted="true"></video>
-                <canvas width="416" height="416"></canvas>
-            </div> 
+        <p>Created by <code>Mavox-ID</code></p>
+    </header>
+
+    <main>
+        <div class="content">
+            <video id="video" autoplay playsinline muted></video>
+            <canvas id="canvas" width="416" height="416"></canvas>
         </div>
-    </div>
-    <div>
-    <button id="runInference">Run Inference</button>
-    <button id="stopInference">Stop Inference</button>
+
+        <div class="controls">
+            <button id="runInference">Run Inference</button>
+            <button id="stopInference">Stop Inference</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mavox-ID (Bionic Glass; Bioglass) | All rights reserved</p>
+    </footer>
+
     <script src="js/main.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+            .then(() => console.log('Service Worker registered!'))
+            .catch((err) => console.log(err));
+        }
+    </script>
 </body>
 </html>
